@@ -125,6 +125,7 @@ $(document).ready(function(){
 
     var url = $(this).attr('action');
     var form = $(this);
+    console.log(form);
     var data = new FormData(this);
 
     $.ajax({
