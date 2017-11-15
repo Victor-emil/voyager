@@ -143,9 +143,6 @@ $(document).ready(function(){
         $("body").css("cursor", "auto");
 
         $.each(d.errors, function(key, row){
-            console.log('er vi her?');
-            console.log(key);
-            console.log($("[data-name='"+key+"']"));
                                         // Scroll to first error
                                         if (Object.keys(d.errors).indexOf(key) === 0) {
                                             $('html, body').animate({
