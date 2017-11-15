@@ -150,6 +150,8 @@ $(document).ready(function(){
                                         //                 - $('nav.navbar').height() + 'px'
                                         //     }, 'fast');
                                         // }
+            console.log(key);
+            console.log($("[data-name='"+key+"']"));
 
           $("[data-name='"+key+"']").parent().addClass("has-error");
           $("[data-name='"+key+"']").parent().append("<span class='help-block' style='color:#f96868'>"+row+"</span>")
