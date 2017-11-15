@@ -125,7 +125,7 @@ $(document).ready(function(){
 
     var url = $(this).attr('action');
     var form = $(this);
-    console.log(form);
+    console.log('hest');
     var data = new FormData(this);
 
     $.ajax({
