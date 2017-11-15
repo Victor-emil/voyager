@@ -126,6 +126,7 @@ $(document).ready(function(){
     var url = $(this).attr('action');
     var form = $(this);
     var data = new FormData(this);
+    console.log('Stor fed ged');
 
     $.ajax({
       url: url,
