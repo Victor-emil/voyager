@@ -143,15 +143,15 @@ $(document).ready(function(){
         $("body").css("cursor", "auto");
 
         $.each(d.errors, function(key, row){
-                                        //Scroll to first error
-                                        // if (Object.keys(d.errors).indexOf(key) === 0) {
-                                        //     $('html, body').animate({
-                                        //         scrollTop: $("[data-name='"+key+"']").parent().offset().top
-                                        //                 - $('nav.navbar').height() + 'px'
-                                        //     }, 'fast');
-                                        // }
             console.log(key);
             console.log($("[data-name='"+key+"']"));
+                                        // Scroll to first error
+                                        if (Object.keys(d.errors).indexOf(key) === 0) {
+                                            $('html, body').animate({
+                                                scrollTop: $("[data-name='"+key+"']").parent().offset().top
+                                                        - $('nav.navbar').height() + 'px'
+                                            }, 'fast');
+                                        }
 
           $("[data-name='"+key+"']").parent().addClass("has-error");
           $("[data-name='"+key+"']").parent().append("<span class='help-block' style='color:#f96868'>"+row+"</span>")
