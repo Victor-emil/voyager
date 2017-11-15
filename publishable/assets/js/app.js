@@ -22179,6 +22179,7 @@ $(document).ready(function () {
   $(".form-edit-add").submit(function (e) {
     e.preventDefault();
 
+    var button = this;
     var url = $(this).attr('action');
     var form = $(this);
     console.log(form);
@@ -22212,7 +22213,7 @@ $(document).ready(function () {
         });
       },
       error: function error() {
-        $(form).unbind("submit").submit();
+        $(form).unbind(button).submit();
       }
     });
   });
